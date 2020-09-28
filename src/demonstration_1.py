@@ -18,8 +18,16 @@ The assumptions we are making about our input are the following:
 - The specified size is always a positive integer.
 """
 def split_in_parts(s, part_length):
-    # Your code here
-
-
+    output = []
+    counter = 0
+    for char in s:
+        counter += 1
+        if counter % part_length == 0:
+            output.append(char)
+            output.append(" ")
+        else:
+            output.append(char)
+    return output
 # Your code here
-
+arr_to_print = split_in_parts("supercalifragilisticexpialidocious", 3)
+print("".join(arr_to_print))
